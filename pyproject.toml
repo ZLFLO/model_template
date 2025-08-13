@@ -12,8 +12,8 @@ dependencies = [
     "zlflodata @ git+https://github.com/ZLFLO/data.git@main",
 ]
 
-[dependency-groups]
-dev = ["ipykernel>=6.29.5", "ruff>=0.11.8"]
+[project.optional-dependencies] 
+test = ["ruff>=0.11.8", "model_template[dev]", "pytest>=7", "pytest-cov", "pytest-dependency"]
 
 [tool.ruff]
 extend-include = ["*.ipynb"]
