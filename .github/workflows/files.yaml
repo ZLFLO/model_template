@@ -8,4 +8,4 @@ jobs:
 
       - name: Check for invalid files
         run: |
-          python3 files.py
+          python3 .github/workflows/files.py
