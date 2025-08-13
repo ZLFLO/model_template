@@ -1,7 +1,7 @@
 name: CI Model Checks
 on: pull_request
 jobs:
-    build-and-test:
+    model_run:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout code
