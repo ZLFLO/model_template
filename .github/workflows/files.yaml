@@ -8,7 +8,7 @@ jobs:
       - name: LFS-warning
         uses: ppremk/lfs-warning@v3.3
         with:
-          filesizelimit: 5MB
+          filesizelimit: 5mb
 
       - name: Check for invalid file extensions
         run: |
