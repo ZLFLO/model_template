@@ -1,32 +1,11 @@
 name: CI File Checks
 on: pull_request
 jobs:
-  lfs-warning:
+  file_checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: LFS-warning
-        uses: ppremk/lfs-warning@v3.3
-        with:
-          filesizelimit: 10MB
 
-      - name: Check for invalid file extensions
+      - name: Check for invalid files
         run: |
-          python3 <<EOF
-          import os
-
-          allowed_extensions = {"md", "py", "yml", "yaml", "txt", "json", "gitignore", "ini", "cfg", "toml", "ipynb"}
-          invalid_files = []
-
-          for root, _, files in os.walk("."):
-          for file in files:
-          ext = file.split(".")[-1] if "." in file else ""
-          if ext not in allowed_extensions:
-              invalid_files.append(os.path.join(root, file))
-
-          if invalid_files:
-          print("Invalid file extensions found:")
-          for f in invalid_files:
-          print(f)
-          exit(1)
-          EOF
+          python3 .github/workflows/files.py
