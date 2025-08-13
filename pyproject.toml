@@ -1,0 +1,25 @@
+[project]
+name = "model_template"
+version = "0.1.0"
+description = "Example setup"
+authors = [
+    { name = "Onno Ebbens", email = "o.ebbens@artesia-water.nl" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "nlmod",
+    "zlflodata @ git+https://github.com/ZLFLO/data.git@main",
+]
+
+[dependency-groups]
+dev = ["ipykernel>=6.29.5", "ruff>=0.11.8"]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+lint.extend-select = ["I"]
+show-fixes = true
+fix = true
+
+[tool.uv]
+prerelease = "allow"
