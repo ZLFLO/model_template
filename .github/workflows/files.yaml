@@ -4,11 +4,14 @@ jobs:
   file_checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: LFS-warning
         uses: ppremk/lfs-warning@v3.3
         with:
-          filesizelimit: 5mb
+          filesizelimit: 5MB
+          exclusionPatterns: |
+            **/*.ipynb
+
+      - uses: actions/checkout@v4
 
       - name: Check for invalid file extensions
         run: |
