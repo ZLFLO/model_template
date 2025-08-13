@@ -1,10 +1,12 @@
+[project]
 name = "PROJECT_NAME"
 version = "0.0.0"
+
 description = "PROJECT_DESCRIPTION"
 readme = "README.md"
 authors = [{ name = "YOUR NAME", email = "your.email@example.com" }]
-requires-python = "~=3.13"                                           # define python version
-dependencies = []
+requires-python = ">=3.13.0, <3.14"                                       # define python version
+dependencies = ["zlflodata @ git+https://github.com/ZLFLO/data.git@main"]
 
 [project.optional-dependencies]
 dev = ["ruff", "pre-commit"]
