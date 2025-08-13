@@ -1,14 +1,14 @@
 name: CI File Checks
 on: pull_request
 jobs:
-  lfs-warning:
+  file_checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: LFS-warning
         uses: ppremk/lfs-warning@v3.3
         with:
-          filesizelimit: 10MB
+          filesizelimit: 5MB
 
       - name: Check for invalid file extensions
         run: |
