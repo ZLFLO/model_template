@@ -1,25 +1,19 @@
-[project]
-name = "model_template"
-version = "0.1.0"
-description = "Example setup"
-authors = [
-    { name = "Onno Ebbens", email = "o.ebbens@artesia-water.nl" },
-]
+name = "PROJECT_NAME"
+version = "0.0.0"
+description = "PROJECT_DESCRIPTION"
 readme = "README.md"
-requires-python = ">=3.11"
-dependencies = [
-    "nlmod",
-    "zlflodata @ git+https://github.com/ZLFLO/data.git@main",
-]
+authors = [{ name = "YOUR NAME", email = "your.email@example.com" }]
+requires-python = "~=3.13"                                           # define python version
+dependencies = []
 
-[dependency-groups]
-dev = ["ipykernel>=6.29.5", "ruff>=0.11.8"]
+[project.optional-dependencies]
+dev = ["ruff", "pre-commit"]
+
+[tool.uv]
+prerelease = "allow"
 
 [tool.ruff]
 extend-include = ["*.ipynb"]
 lint.extend-select = ["I"]
 show-fixes = true
 fix = true
-
-[tool.uv]
-prerelease = "allow"
