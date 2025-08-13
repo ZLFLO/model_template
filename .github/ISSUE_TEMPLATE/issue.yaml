@@ -21,9 +21,9 @@ body:
     attributes:
       label: Version
       description: What versions are you running?
-      options:
-        - Python vX.X.X
-        - Other vX.X.X
+      placeholder: |
+        python version
+        other relevant software versions (`package.show_versions()`)
   - type: textarea
     id: logs
     attributes:
