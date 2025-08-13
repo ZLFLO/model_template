@@ -7,7 +7,7 @@ import geopandas as gpd
 import nlmod
 
 import settings  # local module with model settings
-from utils_zlflo import get_abs_data_path  # local module for data path handling
+from zlflodata import get_abs_data_path  # local module for data path handling
 
 # create a logger instance
 logger = logging.getLogger(__name__)
