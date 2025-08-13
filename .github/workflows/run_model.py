@@ -1,12 +1,14 @@
-import sys
 import subprocess
+import sys
 from pathlib import Path
 
-SRC_DIR = Path(__file__).parent.parent.parent / 'src'
+SRC_DIR = Path(__file__).parent.parent.parent / "src"
 SRC_DIR = SRC_DIR.resolve()
 
+
 def find_python_files(directory):
-    return directory.rglob('*.py')
+    return directory.rglob("*.py")
+
 
 def main():
     errors = []
@@ -25,6 +27,7 @@ def main():
         sys.exit(1)
     else:
         print("\nAll files ran successfully.")
+
 
 if __name__ == "__main__":
     main()

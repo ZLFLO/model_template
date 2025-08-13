@@ -8,7 +8,8 @@ def get_all_files(root: Path) -> list[Path]:
     files = [
         f.relative_to(root)
         for f in root.rglob("*")
-        if f.is_file() and not any(part.startswith(".") for part in f.relative_to(root).parts)
+        if f.is_file()
+        and not any(part.startswith(".") for part in f.relative_to(root).parts)
     ]
     return files
 
