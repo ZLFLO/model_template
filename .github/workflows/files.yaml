@@ -8,4 +8,4 @@ jobs:
 
       - name: Check for invalid files
         run: |
-          python3 ../.github/scripts/files.py
+          python3 files.py
