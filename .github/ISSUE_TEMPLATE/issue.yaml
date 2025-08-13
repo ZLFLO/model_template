@@ -16,7 +16,7 @@ body:
       value: "An issue happened!"
     validations:
       required: true
-  - type: dropdown
+  - type: textarea
     id: version
     attributes:
       label: Version
