@@ -1,5 +1,9 @@
 name: CI Model Checks
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 jobs:
     model_run:
       runs-on: ubuntu-latest
